@@ -19,7 +19,7 @@
 		},
 
 		initCitySearch: function() {
-			"http://query.yahooapis.com/v1/public/yql?q=select+*+from+geo.places.descendants+where+ancestor_woeid={yourcountywoeid}+and+placetype='Town'"
+			"https://query.yahooapis.com/v1/public/yql?q=select+*+from+geo.places.descendants+where+ancestor_woeid={yourcountywoeid}+and+placetype='Town'"
 		},
 
 		getForecast: function (position) {
@@ -27,7 +27,7 @@
 			var lat = position.coords.latitude;
 
 			var locationQuery = escape('select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text = "('+ lat + ',' + long + ')") and u="c"');
-    		url = "http://query.yahooapis.com/v1/public/yql?q=" + locationQuery + "&format=json";
+    		url = "https://query.yahooapis.com/v1/public/yql?q=" + locationQuery + "&format=json";
 			
 			var method = 'GET';
 		
