@@ -10,39 +10,24 @@
 
 <h1><img src="img/logo.svg" height="30" alt="logo">Weather App</h1>
 
-<section class="location-wrap">
-	<header>
-		<h2>Weather Forecast for Upcoming 7 days</h2>
-	</header>
-
-	<div class="location-selector">
-		<label for="selectedLocation">Location: </label>
-		<select id="selectedLocation">
-			<option>Yerevan</option>
-			<option>Gyumri</option>
-			<option>Stepanavan</option>
-			<option>Eghegnadzor</option>
-		</select>
-	</div>
-
-</section>
-
-<section class="forecast-wrap">
-	
-</section>
-
-<section class="details-wrap">
-	<header>Details for <span></span></header>
-	<div class="details">
-		
-	</div>
-</secation>
-
-
+<div id="root">
+	Loading...
+</div>
 
 <script src="js/app.js"></script>
 <script>
-	WFApp.init();
+	WFApp.init({
+		el: '#root',
+		daysCount: 7,
+		cities: [
+			{ title: 'Yerevan', lat: '40.177200', long: '44.503490' },
+			{ title: 'Moscow', lat: '55.751244', long: '37.618423' },
+			{ title: 'New York City', lat: '40.730610', long: '-73.935242' },
+			{ title: 'Madrid', lat: '40.416775', long: '-3.703790' }
+		]
+		// Weekdays array & 
+		// Months array can also be passed in
+	});
 </script>
 </body>
 </html>
