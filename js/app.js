@@ -332,7 +332,6 @@
 		}
 
 		function _updateDetails(data) {
-			console.log(data);
 			_getDetailsEl().innerHTML =
 				'<i class="wi wi-yahoo-' + data.code + '"></i>'
 				+ '<p><strong>High:</strong> ' + data.high + '&deg;C</p>'
